@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+
+<style>
+
+.one {
+    color: red;
+    font-weight: 'bold';
+    border: 1px solid black;
+}
+
+.two {
+    color: green;
+    font-style: 'italics';
+    border: 3px dashed red;
+}
+
+</style>
+
+<script>
+$(function() {
+    $('#one').click(function() {
+        $('#one').toggleClass('one');
+        $('#one').toggleClass('two');
+        $('#another').append('<br><a href="ya.ru">ya.ru</a>');
+  })
+})
+</script>
+
+<span id="one">Green</span><br>
+<span id="another">Another</span>

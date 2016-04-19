@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<style>
+
+.one {
+    color: red;
+    font-weight: 'bold';
+    border: 1px solid black;
+}
+
+.two {
+    color: green;
+    font-style: 'italics';
+    border: 3px dashed red;
+}
+
+</style>
+
+<script>
+var flag = true;
+
+function toggle(self) {
+    if (flag) {
+        self.className = 'one';
+        self.innerText = 'Red';
+    } else {
+        self.className = 'two';
+        self.innerText = 'Green';
+    }
+
+    flag = !flag;
+}
+</script>
+
+<span onclick="toggle(this)">Green</span>
