@@ -8,7 +8,7 @@ log = ''
 templ = """
 <!DOCTYPE html>
 <div>
-{{ log }}
+{}
 </div>
 <form action="/" method="POST">
 <input name="msg">
@@ -22,7 +22,7 @@ def hello_world():
     if request.method == 'POST':
         log += request.form['msg'] + '<br>'
 
-    return render_template_string(templ, log=log)
+    return templ.format(log)
 
 
 if __name__ == '__main__':

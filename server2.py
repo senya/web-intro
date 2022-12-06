@@ -18,7 +18,7 @@ def get_log():
 @app.route('/send', methods=['POST'])
 def send():
     global log
-    print request.form
+    print(request.form)
     log += request.form['msg'] + '<br>'
     return log
 
